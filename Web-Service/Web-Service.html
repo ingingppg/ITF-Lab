@@ -1,0 +1,42 @@
+<html>
+
+<head>
+
+    <title>Welcome to JSON</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+</head>
+
+<body style="background-color:LightGray;">
+
+
+    <script type="text/javascript">
+
+            $.getJSON('https://api.exchangeratesapi.io/latest', function(response) {
+
+            document.getElementById("data1").innerHTML = response.date
+            document.getElementById("data2").innerHTML = response.rates.USD + "$"
+            document.getElementById("data3").innerHTML = response.rates.THB + "&#3647;"
+        });
+    
+    </script>
+    
+    <h2><p style="font-size:35px; text-align: center;">Exchange Rate</p></h2>
+    <h4><p style="font-size:30px; text-align: center;" >Date</p></h4>
+    <div style = "color:#339966; text-align: center;"   id="data1" > 
+</div>
+    <h4><p style="font-size:30px; text-align: center;">USD</p></h4>
+    <div style = "color:#339966; text-align: center;"  id="data2"> 
+</div>
+    <h4><p style="font-size:30px; text-align: center;">THB</p></h4>
+    <div style = "color:#339966; text-align: center;"  id="data3"> 
+</div>
+<div><h3>NOTE</h3>
+    <p>ดึง API จาก https://api.exchangeratesapi.io/latest โดยดึง date และ rate โดยใน rate ได้ดึงค่า USD, THB มาแสดง</p>
+    <p>API คือ ข้อมูลที่ผู้ใช้บริการ (เรา) ไปขออนุญาตมาใช้ (การดึง API) มาจากผู้ให้บริการ โดย API จะเป็น raw ข้อมูล โดยเราต้องนำมาจัดการต่อตามการใช้งานของเราเอง โดย API เปรียบเสมือนช่องทางที่ผู้ใช้บริการ สามารถขอข้อมูลบางอย่างจากผู้ให้บริการได้ โดยบางผู้ให้บริการ อาจจำกัดการนำ API ไปใช้งาน</p>
+</div>
+</body>
+
+</html>
