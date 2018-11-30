@@ -1,4 +1,3 @@
 #ITF-Lab 2018
 
-## Author
-นางสาวฐิติรัตน์ จั่นพะระศรี (61070286)
+Information Technology Fundamentals Course 2018 
